@@ -48,7 +48,7 @@ public class Engine {
         yourPoke.setDetail(detail);
     }
 
-    public void allowMoveOpponent(final FightRunningFragment fightable) {
+    public void allowMoveOpponent(final Fightable fightable) {
         Log.d(TAG, "allowMoveOpponent ");
         Config.IDLE_STATE = true;
         new WeakHandler().postDelayed(new Runnable() {

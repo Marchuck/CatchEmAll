@@ -101,8 +101,8 @@ public class FightRunningFragment extends Fragment implements Fightable {
     private void fetchPokemonDetails(String opponentName) {
         Log.d(TAG, "fetchPokemonDetails ");
         if (engineInstance == null) engineInstance = Engine.create();
-        int pokemonID = PokeUtils.getPokemonIdFromName( opponentName);
-        int yourPokeID = PokeUtils.getPokemonIdFromName( App.lastpokeName());
+        int pokemonID = PokeUtils.getPokemonIdFromName(opponentName);
+        int yourPokeID = PokeUtils.getPokemonIdFromName(App.lastpokeName());
         RealmPokeDetail poke = Realm.getInstance(getActivity()).where(RealmPokeDetail.class)
                 .equalTo("pkdxId", pokemonID).findFirst();
         if (poke == null) {
@@ -166,7 +166,7 @@ public class FightRunningFragment extends Fragment implements Fightable {
         yourPokeLevel.setText("Level 4");
 
         opponentNameTV.setText(PokeUtils.getPrettyPokemonName(opponentName));
-        yourPokeNameTV.setText(PokeUtils.getPrettyPokemonName(App.lastpokeName() ));
+        yourPokeNameTV.setText(PokeUtils.getPrettyPokemonName(App.lastpokeName()));
 
         Picasso.with(getActivity()).load(getOpponentPokemonResource()).into(opponentPokemon);
         Picasso.with(getActivity()).load(getYourPokemonResource()).into(yourPokemon);
@@ -221,10 +221,9 @@ public class FightRunningFragment extends Fragment implements Fightable {
                                                     }
                                                 });
                                                 performInjuryAnimation(opponentPokemon);
-                                            }else{
-                                                switchToWinnerState();return;
                                             }
-                                            engineInstance.allowMoveOpponent(FightRunningFragment.this);
+                                            if (engineInstance.getOpponentPoke().getHp() > 0)
+                                                engineInstance.allowMoveOpponent(FightRunningFragment.this);
                                         }
 
                                         @Override
@@ -448,7 +447,6 @@ public class FightRunningFragment extends Fragment implements Fightable {
         performDeathAnimation(false);
         Log.d(TAG, "switchToWinnerState ");
         Snackbar.make(getView(), "Congratulations! You have beaten " + opponentName, Snackbar.LENGTH_LONG).show();
-        engineInstance = null;
         new WeakHandler().postDelayed(new Runnable() {
             @Override
             public void run() {
