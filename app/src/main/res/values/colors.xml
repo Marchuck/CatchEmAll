@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="halfTransparent">#80b1d6ff</color>
+    <color name="weakness">#9092ff</color>
+    <color name="ineffective">#fffead</color>
+    <color name="superEffective">#ff489d</color>
+
+</resources>

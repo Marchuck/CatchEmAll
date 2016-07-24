@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GottaCatchEmAll</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_fight">Fight!</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_bundler">BundlerActivity</string>
+    <string name="title_activity_pokemon_info">Pokemon details</string>
+    <string name="title_activity_splash">Catch\'em all</string>
+    <string name="title_activity_second_splash">SecondSplashActivity</string>
+    <string name="title_activity_poke_type">PokeTypeActivity</string>
+</resources>

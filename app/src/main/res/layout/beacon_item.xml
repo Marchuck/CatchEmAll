@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100sp"
+    android:padding="15sp"
+    android:id="@+id/parent"
+    android:clickable="true">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/mac_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffff12"
+        android:padding="10sp"
+        android:text="mac" />
+    <ImageView
+        android:layout_toRightOf="@+id/mac_address"
+        android:src="@drawable/cyan"
+        android:id="@+id/image"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="#00FF00A4"
+        android:text="mac" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff5dc3ff"
+        android:padding="10sp"
+        android:text="name"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/rssi" />
+    <TextView
+        android:id="@+id/near"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffe58dff"
+        android:padding="10sp"
+        android:text="        "
+        android:layout_below="@+id/name" />
+
+    <TextView
+        android:id="@+id/rssi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="#ffff6745"
+        android:padding="10sp"
+        android:text="rssi" />
+
+
+</RelativeLayout>

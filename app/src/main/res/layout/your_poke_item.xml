@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2sp"
+    android:id="@+id/parent"
+    android:clickable="true">
+
+    <TextView
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/pokeImage"
+        android:id="@+id/pokeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10sp" />
+    <ImageView
+        android:src="@drawable/cyan"
+        android:id="@+id/pokeImage"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:text="mac"  />
+</RelativeLayout>

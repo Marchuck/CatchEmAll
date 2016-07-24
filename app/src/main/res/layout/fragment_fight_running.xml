@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lukasz.marczak.pl.gotta_catch_em_all.fragments.fight.FightRunningFragment">
+
+    <include
+        android:id="@+id/opponent_front_status"
+        layout="@layout/state_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/opponent_front"
+        android:layout_toStartOf="@+id/action" />
+
+    <include
+        android:id="@+id/your_pokemon_back_status"
+        layout="@layout/state_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fight"
+        android:layout_alignEnd="@+id/bag"
+        android:layout_alignStart="@+id/fight"
+        android:layout_toEndOf="@+id/action" />
+
+    <ImageView
+        android:id="@+id/opponent_front"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_above="@+id/action"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/announce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/action"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="" />
+
+    <com.tt.whorlviewlibrary.WhorlView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/action"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="15sp"
+        android:visibility="invisible"
+        app:whorlview_circle_colors="#F14336_#c0392b_#2980b9_#f39c12_#16a085"
+        app:whorlview_circle_speed="270"
+        app:whorlview_parallax="medium"
+        app:whorlview_strokeWidth="6"
+        app:whorlview_sweepAngle="90" />
+    <!--<ProgressBar-->
+    <!--android:id="@+id/action"-->
+    <!--android:layout_width="100sp"-->
+    <!--android:layout_height="100sp"-->
+    <!--android:layout_above="@+id/your_pokemon_back"-->
+    <!--android:layout_centerHorizontal="true" />-->
+
+    <ImageView
+        android:id="@+id/your_pokemon_back"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_above="@+id/question"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/your_pokemon_back_status" />
+
+    <TextView
+        android:id="@+id/run"
+        android:layout_width="80sp"
+        android:layout_height="50sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="15sp"
+        android:paddingLeft="15sp"
+        android:paddingRight="5sp"
+        android:paddingTop="15sp"
+        android:text="RUN" />
+
+    <TextView
+        android:id="@+id/fight"
+        android:layout_width="80sp"
+        android:layout_height="50sp"
+        android:layout_alignTop="@+id/bag"
+        android:layout_toStartOf="@+id/bag"
+        android:padding="15sp"
+        android:text="FIGHT"
+        android:typeface="monospace" />
+
+    <TextView
+        android:id="@+id/bag"
+        android:layout_width="80sp"
+        android:layout_height="50sp"
+        android:layout_above="@+id/run"
+        android:layout_toEndOf="@+id/select_pokemon"
+        android:paddingBottom="15sp"
+        android:paddingLeft="15sp"
+        android:paddingRight="5sp"
+        android:paddingTop="15sp"
+        android:text="BAG"
+        android:typeface="monospace" />
+
+    <TextView
+        android:id="@+id/select_pokemon"
+        android:layout_width="80sp"
+        android:layout_height="50sp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/run"
+        android:padding="15sp"
+        android:text="POKEMON"
+        android:typeface="monospace" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="190sp"
+        android:layout_height="50sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/fight"
+        android:lines="2"
+        android:padding="15sp"
+        android:text=""
+        android:typeface="monospace" />
+
+</RelativeLayout>

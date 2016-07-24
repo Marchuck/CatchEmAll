@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6cff6d"
+    android:id="@+id/parent"
+    tools:context="lukasz.marczak.pl.gotta_catch_em_all.fragments.main.TripFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/choose"
+            android:layout_width="300sp"
+            android:layout_height="300sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15sp"
+            android:clickable="true"
+            android:padding="15sp" />
+
+
+        <TextView
+            android:layout_below="@+id/choose"
+            android:paddingTop="10sp"
+            android:textSize="45sp"
+            android:typeface="sans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="  -use drawer ;D" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="lukasz.marczak.pl.gotta_catch_em_all.activities.FightActivity">
+
+    <RelativeLayout
+        android:id="@+id/dataParent3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tt.whorlviewlibrary.WhorlView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressBar_details"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="15sp"
+            app:whorlview_circle_colors="#F14336_#c0392b_#2980b9_#f39c12_#16a085"
+            app:whorlview_circle_speed="270"
+            app:whorlview_parallax="medium"
+            app:whorlview_strokeWidth="6"
+            app:whorlview_sweepAngle="90" />
+
+        <ImageView
+            android:id="@+id/pokemon_image"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pokemon_name" />
+
+        <TextView
+            android:id="@+id/pokemon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="15sp"
+            android:text="2"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/pokemon_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pokemon_name"
+            android:layout_alignParentEnd="true"
+            android:padding="15sp"
+            android:text="3"
+            android:textSize="30sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pokemon_image"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/pokemon_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text=""
+                android:textSize="15sp" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>
