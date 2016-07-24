@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 import io.realm.Realm;
+import pl.marchuck.catchemall.App;
 import pl.marchuck.catchemall.JsonArium.PokeMoveDeserializer;
 import pl.marchuck.catchemall.connection.PokeApi;
 import pl.marchuck.catchemall.connection.SimpleRestAdapter;
@@ -39,10 +40,9 @@ public abstract class MovesDownloader {
     public void start(final Progressable context, List<Integer> moves) {
         if (moves == null || moves.size() == 0) {
             Log.e(TAG, "start ");
-            Realm realm = Realm.getInstance(context.getActivity());
+            Realm realm = Realm.getInstance(App.ctx());
             try {
                 realm.beginTransaction();
-
                 List<RealmMove> list = realm.where(RealmMove.class).findAllSorted("id", true);
                 List<PokeMove> moves1 = new ArrayList<>();
 
